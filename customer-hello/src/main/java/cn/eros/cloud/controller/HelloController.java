@@ -17,7 +17,7 @@ import java.net.URI;
  */
 @RestController
 public class HelloController {
-    private Logger logger = LoggerFactory.getLogger(HelloController.class);
+    private final Logger logger = LoggerFactory.getLogger(HelloController.class);
 
     private final RestTemplate restTemplate;
     private final LoadBalancerClient loadBalancerClient;
@@ -42,7 +42,7 @@ public class HelloController {
 
         URI uri = URI.create(String.format("http://%s:%s/hello", serviceInstance.getHost(), serviceInstance.getPort()));
 
-        logger.info("target service uri: {}", uri.toString());
+        this.logger.info("target service uri: {}", uri.toString());
 
         /* 若注入的restTemplate存在 {code @LoadBalanced}，则不可使用此方式进行负载均衡调用
          * {code return this.restTemplate.getForEntity(uri, String.class).getBody(); }
