@@ -21,13 +21,13 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
-            <version>1.4.7.RELEASE</version>
+            <version>${spring-cloud-eureka.version}</version>
         </dependency>
         <!-- 用于处理客户端的负载均衡 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-ribbon</artifactId>
-            <version>1.4.7.RELEASE</version>
+            <version>${spring-cloud-eureka.version}</version>
         </dependency>
     </dependencies>
 
