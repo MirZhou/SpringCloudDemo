@@ -1,6 +1,7 @@
-package cn.eros.cloud.product.service.controller;
+package cn.eros.cloud.product.controller;
 
-import cn.eros.cloud.product.service.entity.Product;
+import cn.eros.cloud.product.api.entity.Product;
+import cn.eros.cloud.product.api.service.ProductApiService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,14 +18,16 @@ import java.util.stream.IntStream;
  */
 @Slf4j
 @RestController
-public class ProductController {
+public class ProductEndpoint implements ProductApiService {
+    @Override
     @GetMapping("/products")
-    public List<Product> list() {
+    public List<Product> findAll() {
         return this.buildProducts();
     }
 
+    @Override
     @GetMapping("/product/{itemCode}")
-    public Product detail(@PathVariable String itemCode) {
+    public Product getByItemCode(@PathVariable String itemCode) {
         return this.buildProducts().stream()
                 .filter(item -> itemCode.equalsIgnoreCase(item.getItemCode()))
                 .findFirst()

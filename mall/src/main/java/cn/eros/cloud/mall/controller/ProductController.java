@@ -1,7 +1,7 @@
 package cn.eros.cloud.mall.controller;
 
-import cn.eros.cloud.mall.dto.bo.Product;
 import cn.eros.cloud.mall.service.ProductService;
+import cn.eros.cloud.product.api.entity.Product;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,4 +1,4 @@
-package cn.eros.cloud.product.service.entity;
+package cn.eros.cloud.product.api.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

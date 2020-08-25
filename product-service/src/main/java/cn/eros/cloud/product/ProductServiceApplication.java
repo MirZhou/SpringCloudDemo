@@ -1,4 +1,4 @@
-package cn.eros.cloud.product.service;
+package cn.eros.cloud.product;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

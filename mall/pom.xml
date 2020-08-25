@@ -15,6 +15,14 @@
     <artifactId>mall</artifactId>
 
     <dependencies>
+        <!-- 项目模块间依赖 -->
+        <dependency>
+            <groupId>cn.eros.cloud.product.api</groupId>
+            <artifactId>product-service-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!-- 第三方JAR包依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

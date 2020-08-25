@@ -23,6 +23,7 @@
         <module>customer-hello</module>
         <module>product-service</module>
         <module>mall</module>
+        <module>product-service-api</module>
     </modules>
 
 </project>
