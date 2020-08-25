@@ -22,6 +22,7 @@
         <module>eureka-client</module>
         <module>customer-hello</module>
         <module>product-service</module>
+        <module>mall</module>
     </modules>
 
 </project>
